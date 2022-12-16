@@ -17,5 +17,15 @@ export const navigation = [
         path: '/tasks'
       }
     ]
+  },
+  {
+    text: 'Employee',
+    icon: 'user',
+    items: [
+      {
+        text: 'เพิ่มพนักงาน',
+        path: '/employee'
+      }
+    ]
   }
 ];

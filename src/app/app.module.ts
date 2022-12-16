@@ -1,3 +1,4 @@
+import { DxButtonModule, DxFormModule } from 'devextreme-angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,10 +8,12 @@ import { FooterModule, ResetPasswordFormModule, CreateAccountFormModule, ChangeP
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
+import { EmployeeComponent } from './pages/employee/employee.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
     ChangePasswordFormModule,
     LoginFormModule,
     UnauthenticatedContentModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DxFormModule,
+    DxButtonModule
   ],
   providers: [
     AuthService,

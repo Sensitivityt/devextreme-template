@@ -1,0 +1,14 @@
+<h2 class="content-block">พนักงาน</h2>
+<div class="content-block dx-card responsive-paddings">
+    <dx-form [formData]="employee" [colCount]="2">
+        <dxi-item dataField="ชื่อ - สกุล"></dxi-item>
+        <dxi-item dataField="ตำแหน่ง"></dxi-item>
+        <dxi-item dataField="วันเกิด" editorType="dxDateBox"></dxi-item>
+        <dxi-item dataField="เบอร์โทรศัพท์"></dxi-item>
+        <dxi-item dataField="อีเมล"></dxi-item>
+    </dx-form>
+    <div style="text-align: center;">
+        <dx-button stylingMode="contained" text="ยืนยัน" type="success" [width]="120" (onClick)="click($event)">
+        </dx-button>
+    </div>
+</div>
