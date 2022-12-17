@@ -12,8 +12,8 @@ import { CmsProvinceInfo } from '../province-list/province-list.component';
 })
 export class ProvinceComponent implements OnInit {
   @ViewChild(DxFormComponent, { static: true }) form!: DxFormComponent;
+  formData!: CmsProvinceInfo;
   radioActive: any = [{ id: "A", text: "ใช้งาน" }, { id: "I", text: "ไม่ใช้งาน" }];
-  public formData!: CmsProvinceInfo;
   province = {};
   _isLoading = false;
   constructor(

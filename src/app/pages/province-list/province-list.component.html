@@ -27,3 +27,35 @@
         </div>
     </dx-data-grid>
 </div>
+
+<dx-popup [width]="800" [height]="350" title="แก้ไขข้อมูล" [(visible)]="popupVisible" [closeOnOutsideClick]="true">
+    <div *dxTemplate="let data of 'content'">
+        <div class="row">
+            <dx-form [formData]="province" [colCount]="2">
+                <dxi-item dataField="PROVINCE_NAME_THA" editorType="dxTextBox"
+                    [editorOptions]="{ placeholder:'ชื่อจังหวัดภาษาไทย',showClearButton:true }">
+                    <dxo-label text="ชื่อจังหวัดภาษาไทย"></dxo-label>
+                    <dxi-validation-rule type="required" message="กรุณากรอก ชื่อจังหวัดภาษาไทย">
+                    </dxi-validation-rule>
+                </dxi-item>
+                <dxi-item dataField="PROVINCE_NAME_ENG" editorType="dxTextBox"
+                    [editorOptions]="{ placeholder:'ชื่อจังหวัดภาษาอังกฤษ',showClearButton:true }">
+                    <dxo-label text="ชื่อจังหวัดภาษาอังกฤษ"></dxo-label>
+                    <dxi-validation-rule type="required" message="กรุณากรอก ชื่อจังหวัดภาษาอังกฤษ">
+                    </dxi-validation-rule>
+                </dxi-item>
+                <dxi-item dataField="RECORD_STATUS" editorType="dxRadioGroup" [editorOptions]="{value: statusFlag,
+                    items:radioActive, valueExpr:'id', displayExpr:'text',
+                    layout:'horizontal'}">
+                    <dxo-label text="สถานะการใช้งาน"></dxo-label>
+                    <dxi-validation-rule type="required" message="กรุณาเลือก สถานะการใช้งาน">
+                    </dxi-validation-rule>
+                </dxi-item>
+            </dx-form>
+            <div style="text-align: center;">
+                <dx-button stylingMode="contained" text="ยืนยัน" type="success" [width]="120" (onClick)="save()">
+                </dx-button>
+            </div>
+        </div>
+    </div>
+</dx-popup>

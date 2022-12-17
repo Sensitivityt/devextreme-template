@@ -1,4 +1,4 @@
-import { DxButtonModule, DxFormModule, DxDataGridModule, DxRadioGroupModule, DxLoadPanelModule } from 'devextreme-angular';
+import { DxButtonModule, DxFormModule, DxDataGridModule, DxRadioGroupModule, DxLoadPanelModule, DxPopupModule } from 'devextreme-angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -39,7 +39,8 @@ import { ProvinceListComponent } from './pages/province-list/province-list.compo
     DxDataGridModule,
     HttpClientModule,
     DxRadioGroupModule,
-    DxLoadPanelModule
+    DxLoadPanelModule,
+    DxPopupModule
   ],
   providers: [
     AuthService,

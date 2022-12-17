@@ -20,7 +20,7 @@ export const navigation = [
   },
   {
     text: 'จังหวัด',
-    icon: 'folder',
+    icon: 'globe',
     items: [
       {
         text: 'เพิ่มจังหวัด',
