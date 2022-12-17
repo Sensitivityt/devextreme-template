@@ -1,0 +1,32 @@
+<h2 class="content-block">ข้อมูลจังหวัด</h2>
+<div class="content-block dx-card responsive-paddings">
+    <dx-form [formData]="province" [colCount]="2">
+        <dxi-item dataField="PROVINCE_NAME_THA" editorType="dxTextBox"
+            [editorOptions]="{ placeholder:'ชื่อจังหวัดภาษาไทย',showClearButton:true }">
+            <dxo-label text="ชื่อจังหวัดภาษาไทย"></dxo-label>
+            <dxi-validation-rule type="required" message="กรุณากรอก ชื่อจังหวัดภาษาไทย">
+            </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="PROVINCE_NAME_ENG" editorType="dxTextBox"
+            [editorOptions]="{ placeholder:'ชื่อจังหวัดภาษาอังกฤษ',showClearButton:true }">
+            <dxo-label text="ชื่อจังหวัดภาษาอังกฤษ"></dxo-label>
+            <dxi-validation-rule type="required" message="กรุณากรอก ชื่อจังหวัดภาษาอังกฤษ">
+            </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="RECORD_STATUS" editorType="dxRadioGroup" [editorOptions]="{value: formData.RECORD_STATUS,
+            items:radioActive, valueExpr:'id', displayExpr:'text',
+            layout:'horizontal'}">
+            <dxo-label text="สถานะการใช้งาน"></dxo-label>
+            <dxi-validation-rule type="required" message="กรุณาเลือก สถานะการใช้งาน">
+            </dxi-validation-rule>
+        </dxi-item>
+    </dx-form>
+    <div style="text-align: center;">
+        <dx-button stylingMode="contained" text="ยืนยัน" type="success" [width]="120" (onClick)="click()">
+        </dx-button>
+    </div>
+</div>
+
+<dx-load-panel shadingColor="rgba(0,0,0,0.4)" [visible]="_isLoading" [showIndicator]="true" [showPane]="true"
+    [shading]="true" [closeOnOutsideClick]="false" message="กำลังโหลดข้อมูล..." shadingColor="rgba(0, 0, 0, 0.2)">
+</dx-load-panel>

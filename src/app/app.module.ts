@@ -1,4 +1,4 @@
-import { DxButtonModule, DxFormModule } from 'devextreme-angular';
+import { DxButtonModule, DxFormModule, DxDataGridModule, DxRadioGroupModule, DxLoadPanelModule } from 'devextreme-angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,11 +9,18 @@ import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { EmployeeListComponent } from './pages/employee-list/employee-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProvinceComponent } from './pages/province/province.component';
+import { ProvinceListComponent } from './pages/province-list/province-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    EmployeeListComponent,
+    ProvinceComponent,
+    ProvinceListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,11 @@ import { EmployeeComponent } from './pages/employee/employee.component';
     UnauthenticatedContentModule,
     AppRoutingModule,
     DxFormModule,
-    DxButtonModule
+    DxButtonModule,
+    DxDataGridModule,
+    HttpClientModule,
+    DxRadioGroupModule,
+    DxLoadPanelModule
   ],
   providers: [
     AuthService,

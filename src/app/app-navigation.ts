@@ -19,12 +19,16 @@ export const navigation = [
     ]
   },
   {
-    text: 'Employee',
-    icon: 'user',
+    text: 'จังหวัด',
+    icon: 'folder',
     items: [
       {
-        text: 'เพิ่มพนักงาน',
-        path: '/employee'
+        text: 'เพิ่มจังหวัด',
+        path: '/province'
+      },
+      {
+        text: 'ข้อมูลจังหวัด',
+        path: '/province-list'
       }
     ]
   }
